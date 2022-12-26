@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -13,114 +19,125 @@
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
-    <header>
-      <div class="links__block">
-        <img
-          src="images/logo.svg"
-          alt="E-commerce logo called Sneakers"
-          class="sneakers__logo"
-        />
-        <ul class="links__list">
-          <li><a href="#">Collections</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div class="productStorage__block">
-        <img src="images/icon-cart.svg" alt="Cart Icon" class="Cart__icon" />
-        <img
-          src="images/image-avatar.png"
-          alt="Customer's picture"
-          class="customer__picture"
-        />
-      </div>
-    </header>
-
-    <main>
-      <div class="slider__block">
-        <img
-          src="images/image-product-1.jpg"
-          alt="Shoes on an orange and beige background "
-          class="biggest__photo"
-        />
-
-        <div class="smallPhotos__block">
+    <div class="global__container">
+      <header>
+        <div class="links__block">
           <img
-            src="images/image-product-1-thumbnail.jpg"
-            alt=""
-            class="smallest__photo"
+            src="images/logo.svg"
+            alt="E-commerce logo called Sneakers"
+            class="sneakers__logo"
           />
+          <ul class="links__list">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="productStorage__block">
+          <img src="images/icon-cart.svg" alt="Cart Icon" class="Cart__icon" />
           <img
-            src="images/image-product-2-thumbnail.jpg"
-            alt="Shoes on an orange and beige background"
-            class="smallest__photo"
-          />
-          <img
-            src="images/image-product-3-thumbnail.jpg"
-            alt="Shoes on an orange and beige background"
-            class="smallest__photo"
-          />
-          <img
-            src="images/image-product-4-thumbnail.jpg"
-            alt="Shoes on an orange and beige background"
-            class="smallest__photo"
+            src="images/image-avatar.png"
+            alt="Customer's picture"
+            class="customer__picture"
           />
         </div>
-      </div>
+      </header>
 
-      <div class="texts__block">
-        <h1 class="orange__title">Sneaker Company</h1>
-        <h2 class="black__title">Fall Limited Edition Sneakers</h2>
-        <p class="sneakers__description">
-          These low-profile sneakers are your perfect casual wear companion.
-          Featuring a durable rubber outer sole, they'll withstand everything
-          the weather can offer.
-        </p>
-        <div class="prices">
-          <div class="current__price">
-            <p class="new__price">$125.00</p>
-            <p class="price__discount">50%</p>
-          </div>
-          <p class="old__price">$250.00</p>
-        </div>
-        <div class="cart__block">
-          <div class="quantity__choice">
+      <main>
+        <div class="slider__block">
+          <img
+            src="images/image-product-1.jpg"
+            alt="Shoes on an orange and beige background "
+            class="biggest__photo"
+          />
+
+          <div class="smallPhotos__block">
             <img
-              src="images/icon-minus.svg"
-              alt="minus sign"
-              class="minus__sign"
+              src="images/image-product-1-thumbnail.jpg"
+              alt=""
+              class="smallest__photo"
             />
-            <button class="button__quantity">0</button>
             <img
-              src="images/icon-plus.svg"
-              alt="plus sign"
-              class="plus__sign"
+              src="images/image-product-2-thumbnail.jpg"
+              alt="Shoes on an orange and beige background"
+              class="smallest__photo"
             />
-          </div>
-          <div class="add__product">
             <img
-              src="images/icon-cart.svg"
-              alt="Cart Icon"
-              class="Cart__icon"
+              src="images/image-product-3-thumbnail.jpg"
+              alt="Shoes on an orange and beige background"
+              class="smallest__photo"
             />
-            <button class="add__cart">Add To Cart</button>
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt="Shoes on an orange and beige background"
+              class="smallest__photo"
+            />
           </div>
         </div>
-      </div>
-    </main>
 
-    Add to cart
+        <div class="texts__block">
+          <h1 class="orange__title">Sneaker Company</h1>
+          <h2 class="black__title">Fall Limited Edition Sneakers</h2>
+          <p class="sneakers__description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <div class="prices">
+            <div class="current__price">
+              <p class="new__price">$125.00</p>
+              <div class="empty__div">
+                <p class="price__discount">50%</p>
+              </div>
+            </div>
+            <p class="old__price">$250.00</p>
+          </div>
+          <div class="cart__block">
+            <div class="quantity__choice">
+              <button class="minus__button">
+                <img
+                  src="images/icon-minus.svg"
+                  alt="minus sign"
+                  class="minus__sign"
+                />
+              </button>
+              <button class="button__quantity">0</button>
+              <button class="plus__button">
+                <img
+                  src="images/icon-plus.svg"
+                  alt="plus sign"
+                  class="plus__sign"
+                />
+              </button>
+            </div>
+            <div class="add__product">
+              <img
+                src="images/icon-cart-main.svg"
+                alt="Cart Icon"
+                class="Cart__icon"
+              />
+              <button class="add__cart">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+      </main>
 
-    <footer>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </div>
-    </footer>
+      <footer>
+        <div class="attribution">
+          <p>
+            Challenge by
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              >Frontend Mentor</a
+            >
+          </p>
+          <p>Coded by <a href="#">Your Name Here</a>.</p>
+        </div>
+      </footer>
+    </div>
   </body>
   <script src="app.js"></script>
 </html>

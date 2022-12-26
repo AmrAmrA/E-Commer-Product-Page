@@ -1,0 +1,221 @@
+/* A little reset  */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Kumbh sans", sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  color: black;
+}
+
+.global__container {
+  margin: 0 5%;
+}
+/* Design for the header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 1200px;
+  margin-top: 25px;
+  border-bottom: 1.3px solid hsl(220, 14%, 75%);
+}
+
+.links__block {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 65%;
+  margin-bottom: 50px;
+}
+
+.links__list {
+  display: flex;
+  margin-left: 6%;
+}
+.links__list li {
+  margin: 0 10px;
+}
+.links__list li a {
+  color: hsl(219, 9%, 45%);
+}
+.productStorage__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 9%;
+  margin-bottom: 50px;
+}
+.customer__picture {
+  width: 50px;
+  height: 50px;
+}
+
+/* Design for the main part  */
+
+main {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+main img {
+  border-radius: 15px;
+}
+
+.slider__block,
+.texts__block {
+  width: 40%;
+}
+
+.biggest__photo {
+  width: 100%;
+  object-fit: cover;
+  height: 535px;
+  margin-bottom: 25px;
+}
+.smallPhotos__block {
+  display: flex;
+  justify-content: space-between;
+}
+.smallPhotos__block img {
+  width: 20%;
+}
+
+.texts__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+  margin-top: 80px;
+}
+
+.orange__title {
+  color: hsl(26, 100%, 55%);
+  letter-spacing: 1.5px;
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.black__title {
+  font-size: 40px;
+  width: 450px;
+  font-weight: 900;
+  line-height: 50px;
+  margin-bottom: 30px;
+}
+.sneakers__description {
+  width: 440px;
+  font-size: 16px;
+  line-height: 26px;
+  color: hsl(220, 14%, 75%);
+  font-weight: 900;
+}
+.prices {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+.current__price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.new__price {
+  margin-right: 25px;
+  font-weight: 900;
+  font-size: 32px;
+}
+.empty__div {
+  background-color: hsl(25, 100%, 94%);
+  padding: 5px 8px;
+  border-radius: 8px;
+  width: 55px;
+}
+.price__discount {
+  text-align: center;
+  color: hsl(26, 100%, 55%);
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.old__price {
+  text-decoration: line-through;
+  font-size: 18px;
+  color: hsl(219, 9%, 45%);
+}
+
+.cart__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 430px;
+}
+.quantity__choice {
+  background-color: hsl(223, 64%, 98%);
+  display: flex;
+  width: 170px;
+  height: 50px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+.quantity__choice button {
+  outline: none;
+  border: none;
+  background-color: hsl(223, 64%, 98%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add__product {
+  width: 240px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: hsl(26, 100%, 55%);
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add__product img {
+  fill: white;
+}
+
+.add__product button {
+  outline: none;
+  border: none;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  text-align: center;
+  margin-left: 20px;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+footer .attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+footer .attribution p {
+  margin-right: 5px;
+}
