@@ -1,40 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <header>
+      <div class="links__block">
+        <img
+          src="images/logo.svg"
+          alt="E-commerce logo called Sneakers"
+          class="sneakers__logo"
+        />
+        <ul class="links__list">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="productStorage__block">
+        <img src="images/icon-cart.svg" alt="Cart Icon" class="Cart__icon" />
+        <img
+          src="images/image-avatar.png"
+          alt="Customer's picture"
+          class="customer__picture"
+        />
+      </div>
+    </header>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
+    <main>
+      <div class="slider__block">
+        <img
+          src="images/image-product-1.jpg"
+          alt="Shoes on an orange and beige background "
+          class="biggest__photo"
+        />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-</head>
-<body>
+        <div class="smallPhotos__block">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt=""
+            class="smallest__photo"
+          />
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt="Shoes on an orange and beige background"
+            class="smallest__photo"
+          />
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt="Shoes on an orange and beige background"
+            class="smallest__photo"
+          />
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt="Shoes on an orange and beige background"
+            class="smallest__photo"
+          />
+        </div>
+      </div>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+      <div class="texts__block">
+        <h1 class="orange__title">Sneaker Company</h1>
+        <h2 class="black__title">Fall Limited Edition Sneakers</h2>
+        <p class="sneakers__description">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weather can offer.
+        </p>
+        <div class="prices">
+          <div class="current__price">
+            <p class="new__price">$125.00</p>
+            <p class="price__discount">50%</p>
+          </div>
+          <p class="old__price">$250.00</p>
+        </div>
+        <div class="cart__block">
+          <div class="quantity__choice">
+            <img
+              src="images/icon-minus.svg"
+              alt="minus sign"
+              class="minus__sign"
+            />
+            <button class="button__quantity">0</button>
+            <img
+              src="images/icon-plus.svg"
+              alt="plus sign"
+              class="plus__sign"
+            />
+          </div>
+          <div class="add__product">
+            <img
+              src="images/icon-cart.svg"
+              alt="Cart Icon"
+              class="Cart__icon"
+            />
+            <button class="add__cart">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </main>
 
-  Sneaker Company
+    Add to cart
 
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </body>
+  <script src="app.js"></script>
 </html>
