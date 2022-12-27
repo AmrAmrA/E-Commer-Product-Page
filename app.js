@@ -45,10 +45,17 @@ let smallestPhotos = document.querySelectorAll(".smallest__photo");
 let biggestPhoto = document.querySelector(".biggest__photo");
 
 for (let i = 0; i < smallestPhotos.length; i++) {
-  smallestPhotos[i].addEventListener("click", (e) => {
+  smallestPhotos[i].addEventListener("click", function (e) {
     biggestPhoto.src = `${e.explicitOriginalTarget.src.replace(
       "-thumbnail",
       ""
     )}`;
+
+    let active = document.querySelector(".smallest__photo.small__opacity");
+    if (active) {
+      active.classList.remove("small__opacity");
+    }
+
+    e.target.classList.add("small__opacity");
   });
 }
