@@ -27,8 +27,8 @@ let buttonValue = 0;
 
 console.log(buttonQuantity.innerHTML);
 
-let plusSign = document.querySelector(".plus__sign");
-let minusSign = document.querySelector(".minus__sign");
+let plusSign = document.querySelector(".plus__button");
+let minusSign = document.querySelector(".minus__button");
 console.log(plusSign);
 console.log(minusSign);
 plusSign.addEventListener("click", incrementQuantity);
