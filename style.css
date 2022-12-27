@@ -8,6 +8,9 @@
   text-decoration: none;
   font-family: "Kumbh sans", sans-serif;
 }
+body {
+  position: relative;
+}
 li {
   list-style: none;
 }
@@ -18,7 +21,27 @@ a {
 .global__container {
   margin: 0 14%;
 }
+
 /* Design for the header */
+.mobile__menu {
+  display: none;
+}
+.hamburger__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5px;
+  display: none;
+  cursor: pointer;
+  
+}
+.line {
+  width: 15px;
+  color: black;
+  background-color: black;
+  height: 3px;
+  margin-bottom: 3px;
+}
 
 header {
   display: flex;
@@ -32,7 +55,6 @@ header {
 
 .links__block {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   width: 65%;
   margin-bottom: 50px;
@@ -52,7 +74,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 11%;
+  width: 100px;
   margin-bottom: 50px;
 }
 .customer__picture {
@@ -69,6 +91,7 @@ main {
   justify-content: space-between;
   width: 100%;
 }
+
 main img {
   border-radius: 15px;
 }
@@ -222,6 +245,12 @@ footer .attribution p {
   margin-right: 5px;
 }
 
+.appearance {
+  display: block;
+}
+.disAppearance {
+  display: none;
+}
 /* Responsive Part */
 @media screen and (max-width: 1140px) {
   .global__container {
@@ -229,7 +258,13 @@ footer .attribution p {
   }
 }
 
+
 @media screen and (max-width: 855px) {
+  
+  main { 
+    justify-content: space-around;
+  }
+
   .biggest__photo {
     min-width: 0px;
     width: 212px;
@@ -283,5 +318,39 @@ footer .attribution p {
   }
   .add__product {
     width: 91%;
+  }
+}
+
+@media screen and (max-width: 715px) {
+  .global__container {
+    margin: 0px 5%;
+  }
+  .links__list {
+    display: none;
+  }
+  .hamburger__menu {
+    display: block;
+    margin: 8px 10px 0px 10px;
+  }
+  .mobile__menu {
+    position: absolute;
+    background-color: white;
+    height: 120%;
+    width: 55%;
+    margin-top: -25px;  
+    padding: 50px 0px 0px 30px;
+  }
+  .cross__sign {
+    margin-bottom: 50px;
+    cursor: pointer;
+  }
+  .mobile__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 260px;
+  }
+  .items__mobile {
+    font-weight: 900;
   }
 }
