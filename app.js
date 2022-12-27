@@ -2,7 +2,6 @@ let menuIcon = document.querySelector(".hamburger__menu");
 let mobileMenu = document.querySelector(".mobile__menu");
 let crossSign = document.querySelector(".cross__sign");
 let filter = document.querySelector(".globalFilter");
-console.log(filter);
 
 menuIcon.addEventListener("click", menuAppearance);
 crossSign.addEventListener("click", menuDisppearance);
@@ -20,17 +19,12 @@ function menuDisppearance() {
   filter.classList.remove("toggleVisibilty");
 }
 
-console.log(document.body);
-
 let buttonQuantity = document.querySelector(".button__quantity");
 let buttonValue = 0;
 
-console.log(buttonQuantity.innerHTML);
-
 let plusSign = document.querySelector(".plus__button");
 let minusSign = document.querySelector(".minus__button");
-console.log(plusSign);
-console.log(minusSign);
+
 plusSign.addEventListener("click", incrementQuantity);
 minusSign.addEventListener("click", decrementQuantity);
 function incrementQuantity() {
@@ -45,4 +39,16 @@ function decrementQuantity() {
     buttonValue = 0;
     buttonQuantity.textContent = "0";
   }
+}
+
+let smallestPhotos = document.querySelectorAll(".smallest__photo");
+let biggestPhoto = document.querySelector(".biggest__photo");
+
+for (let i = 0; i < smallestPhotos.length; i++) {
+  smallestPhotos[i].addEventListener("click", (e) => {
+    biggestPhoto.src = `${e.explicitOriginalTarget.src.replace(
+      "-thumbnail",
+      ""
+    )}`;
+  });
 }
