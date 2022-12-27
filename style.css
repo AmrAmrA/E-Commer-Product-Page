@@ -87,9 +87,27 @@ header {
 }
 .links__list li {
   margin: 0 10px;
+  margin-top: 60px;
 }
 .links__list li a {
   color: hsl(219, 9%, 45%);
+  margin-bottom: 500000000000px;
+}
+
+.links__list li a::after {
+  content: " ";
+  display: block;
+  background-color: hsl(26, 100%, 55%);
+  width: 30%;
+  height: 5px;
+  margin-top: 50px;
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.links__list li a:hover::after {
+  opacity: 1;
+  width: 100%;
 }
 .productStorage__block {
   display: flex;
