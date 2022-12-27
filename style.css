@@ -24,8 +24,30 @@ a {
 
 /* Design for the header */
 .mobile__menu {
+  position: absolute;
+  background-color: white;
+  height: 120%;
+  width: 55%;
+  margin-top: -25px;
+  padding: 50px 0px 0px 30px;
   display: none;
 }
+.globalFilter {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 55%;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.219);
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  visibility: hidden;
+}
+
 .hamburger__menu {
   display: flex;
   flex-direction: column;
@@ -33,7 +55,6 @@ a {
   margin-top: 5px;
   display: none;
   cursor: pointer;
-  
 }
 .line {
   width: 15px;
@@ -244,13 +265,16 @@ footer .attribution {
 footer .attribution p {
   margin-right: 5px;
 }
-
 .appearance {
   display: block;
 }
 .disAppearance {
   display: none;
 }
+.toggleVisibilty {
+  visibility: visible;
+}
+
 /* Responsive Part */
 @media screen and (max-width: 1140px) {
   .global__container {
@@ -258,10 +282,8 @@ footer .attribution p {
   }
 }
 
-
 @media screen and (max-width: 855px) {
-  
-  main { 
+  main {
     justify-content: space-around;
   }
 
@@ -320,7 +342,12 @@ footer .attribution p {
     width: 91%;
   }
 }
-
+@media screen and (min-width: 715px) {
+  .mobile__menu,
+  .globalFilter {
+    display: none;
+  }
+}
 @media screen and (max-width: 715px) {
   .global__container {
     margin: 0px 5%;
@@ -332,14 +359,7 @@ footer .attribution p {
     display: block;
     margin: 8px 10px 0px 10px;
   }
-  .mobile__menu {
-    position: absolute;
-    background-color: white;
-    height: 120%;
-    width: 55%;
-    margin-top: -25px;  
-    padding: 50px 0px 0px 30px;
-  }
+
   .cross__sign {
     margin-bottom: 50px;
     cursor: pointer;
