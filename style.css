@@ -16,7 +16,7 @@ a {
 }
 
 .global__container {
-  margin: 0 5%;
+  margin: 0 14%;
 }
 /* Design for the header */
 
@@ -25,9 +25,9 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  width: 1200px;
   margin-top: 25px;
   border-bottom: 1.3px solid hsl(220, 14%, 75%);
+  width: 100%;
 }
 
 .links__block {
@@ -52,7 +52,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 9%;
+  width: 11%;
   margin-bottom: 50px;
 }
 .customer__picture {
@@ -66,7 +66,8 @@ main {
   margin-top: 60px;
   margin-bottom: 40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 100%;
 }
 main img {
   border-radius: 15px;
@@ -79,6 +80,7 @@ main img {
 
 .biggest__photo {
   width: 100%;
+  min-width: 400px;
   object-fit: cover;
   height: 535px;
   margin-bottom: 25px;
@@ -86,9 +88,11 @@ main img {
 .smallPhotos__block {
   display: flex;
   justify-content: space-between;
+  min-width: 400px;
 }
 .smallPhotos__block img {
   width: 20%;
+  min-width: 85px;
 }
 
 .texts__block {
@@ -96,7 +100,7 @@ main img {
   flex-direction: column;
   justify-content: space-between;
   height: 400px;
-  margin-top: 80px;
+  margin-top: 13vh;
 }
 
 .orange__title {
@@ -108,13 +112,11 @@ main img {
 }
 .black__title {
   font-size: 40px;
-  width: 450px;
   font-weight: 900;
   line-height: 50px;
   margin-bottom: 30px;
 }
 .sneakers__description {
-  width: 440px;
   font-size: 16px;
   line-height: 26px;
   color: hsl(220, 14%, 75%);
@@ -123,8 +125,8 @@ main img {
 .prices {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
-  margin-bottom: 60px;
+  margin-top: 8%;
+  margin-bottom: 12%;
 }
 .current__price {
   display: flex;
@@ -161,12 +163,12 @@ main img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 430px;
+  width: 95%;
 }
 .quantity__choice {
   background-color: hsl(223, 64%, 98%);
   display: flex;
-  width: 170px;
+  width: 38%;
   height: 50px;
   justify-content: space-around;
   align-items: center;
@@ -183,7 +185,7 @@ main img {
 }
 
 .add__product {
-  width: 240px;
+  width: 56%;
   height: 50px;
   border-radius: 10px;
   background-color: hsl(26, 100%, 55%);
@@ -218,4 +220,68 @@ footer .attribution {
 }
 footer .attribution p {
   margin-right: 5px;
+}
+
+/* Responsive Part */
+@media screen and (max-width: 1140px) {
+  .global__container {
+    margin: 0 2%;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .biggest__photo {
+    min-width: 0px;
+    width: 212px;
+    height: 314px;
+  }
+  .smallPhotos__block {
+    flex-wrap: wrap;
+    width: 212px;
+    min-width: 0;
+  }
+  .smallPhotos__block img {
+    margin-bottom: 20px;
+    height: 92px;
+    width: 100px;
+    object-fit: cover;
+  }
+  .texts__block {
+    margin-top: 1vh;
+  }
+  .orange__title {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  .black__title {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+  .sneakers__description {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .new__price {
+    font-size: 24px;
+  }
+  .price__discount {
+    font-size: 15px;
+  }
+  .old__price {
+    font-size: 14px;
+  }
+  .cart__block {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .quantity__choice {
+    width: 91%;
+    margin-bottom: 25px;
+  }
+  .add__product {
+    width: 91%;
+  }
 }
