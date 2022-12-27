@@ -21,3 +21,28 @@ function menuDisppearance() {
 }
 
 console.log(document.body);
+
+let buttonQuantity = document.querySelector(".button__quantity");
+let buttonValue = 0;
+
+console.log(buttonQuantity.innerHTML);
+
+let plusSign = document.querySelector(".plus__sign");
+let minusSign = document.querySelector(".minus__sign");
+console.log(plusSign);
+console.log(minusSign);
+plusSign.addEventListener("click", incrementQuantity);
+minusSign.addEventListener("click", decrementQuantity);
+function incrementQuantity() {
+  buttonValue++;
+  buttonQuantity.textContent = buttonValue;
+}
+function decrementQuantity() {
+  buttonValue--;
+  buttonQuantity.textContent = buttonValue;
+
+  if (buttonQuantity.textContent <= "0") {
+    buttonValue = 0;
+    buttonQuantity.textContent = "0";
+  }
+}
