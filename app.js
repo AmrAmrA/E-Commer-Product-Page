@@ -59,3 +59,14 @@ for (let i = 0; i < smallestPhotos.length; i++) {
     e.target.classList.add("small__opacity");
   });
 }
+
+let modalBlock = document.querySelector(".modal__block");
+let closeModal = document.querySelector(".close__modal");
+
+biggestPhoto.addEventListener("click", function () {
+  modalBlock.classList.add("active__modale");
+});
+
+closeModal.addEventListener("click", function () {
+  modalBlock.classList.remove("active__modale");
+});
