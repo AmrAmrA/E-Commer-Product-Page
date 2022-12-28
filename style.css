@@ -214,6 +214,34 @@ main img {
   color: white;
   font-weight: 900;
 }
+.next__slide, .prev__slide {
+  position: absolute;
+  top: 48%;
+  right: -7%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev__slide {
+  right: none;
+  left: 0%;
+}
+
+
+.slide__move:hover path {
+  stroke: rgb(255, 0, 0);
+
+}
+
+
+
+
 .texts__block {
   display: flex;
   flex-direction: column;

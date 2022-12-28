@@ -3,6 +3,9 @@ let mobileMenu = document.querySelector(".mobile__menu");
 let crossSign = document.querySelector(".cross__sign");
 let filter = document.querySelector(".globalFilter");
 
+let nextArrow = document.querySelector(".next__slide");
+let centralImage = document.querySelector(".central__image");
+
 menuIcon.addEventListener("click", menuAppearance);
 crossSign.addEventListener("click", menuDisppearance);
 mobileMenu.classList.remove("appearance");
@@ -70,3 +73,26 @@ biggestPhoto.addEventListener("click", function () {
 closeModal.addEventListener("click", function () {
   modalBlock.classList.remove("active__modale");
 });
+
+nextArrow.addEventListener("click", nextSlide);
+
+let add = 1;
+
+function nextSlide() {
+  if (add === 4) {
+    add = 1;
+    centralImage.src = `http://127.0.0.1:5500/images/image-product-${add}.jpg`;
+  } else {
+    add++;
+    centralImage.src = `http://127.0.0.1:5500/images/image-product-${add}.jpg`;
+  }
+}
+console.log(biggestPhoto.src);
+console.log(centralImage.src);
+
+biggestPhoto.addEventListener("click", samePhoto);
+
+function samePhoto() {
+  centralImage.src = biggestPhoto.src;
+}
+samePhoto();
