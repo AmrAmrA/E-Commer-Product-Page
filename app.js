@@ -4,6 +4,7 @@ let crossSign = document.querySelector(".cross__sign");
 let filter = document.querySelector(".globalFilter");
 
 let nextArrow = document.querySelector(".next__slide");
+let prevArrow = document.querySelector(".prev__slide");
 let centralImage = document.querySelector(".central__image");
 
 menuIcon.addEventListener("click", menuAppearance);
@@ -75,24 +76,49 @@ closeModal.addEventListener("click", function () {
 });
 
 nextArrow.addEventListener("click", nextSlide);
+prevArrow.addEventListener("click", prevSlide);
 
-let add = 1;
+let items = document.querySelectorAll(".product__image");
+let count = 0;
+console.log(items);
 
 function nextSlide() {
-  if (add === 4) {
-    add = 1;
-    centralImage.src = `http://127.0.0.1:5500/images/image-product-${add}.jpg`;
+  items[count].classList.remove("central__image");
+  if (count < items.length - 1) {
+    count++;
   } else {
-    add++;
-    centralImage.src = `http://127.0.0.1:5500/images/image-product-${add}.jpg`;
+    count = 0;
   }
+  items[count].classList.add("central__image");
+  console.log(items[count]);
 }
-console.log(biggestPhoto.src);
-console.log(centralImage.src);
+
+function prevSlide() {
+  items[count].classList.remove("central__image");
+  if (count > 0) {
+    count--;
+  } else {
+    count = items.length - 1;
+  }
+  items[count].classList.add("central__image");
+}
 
 biggestPhoto.addEventListener("click", samePhoto);
-
 function samePhoto() {
   centralImage.src = biggestPhoto.src;
 }
 samePhoto();
+
+let thumbnailPhotos = document.querySelectorAll(".thumbnail__photo");
+for (let i = 0; i < thumbnailPhotos.length; i++) {
+  thumbnailPhotos[i].addEventListener("click", function (e) {
+    let activePhoto = document.querySelector(
+      ".thumbnail__photo.small__opacity"
+    );
+    if (activePhoto) {
+      activePhoto.classList.remove("small__opacity");
+    }
+
+    e.target.classList.add("small__opacity");
+  });
+}
