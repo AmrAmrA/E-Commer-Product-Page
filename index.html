@@ -66,6 +66,38 @@
       </header>
 
       <main>
+        <div class="mobile__block">
+          <div class="photos__mobile">
+            <img src="images/image-product-1.jpg" alt="" class="mobile__image invisible__image first__image" />
+            <img src="images/image-product-2.jpg" alt="" class="mobile__image invisible__image" />
+            <img src="images/image-product-3.jpg" alt="" class="mobile__image invisible__image" />
+            <img src="images/image-product-4.jpg" alt="" class="mobile__image invisible__image" />
+          </div>
+          <div class="arrows__mobile">
+            <div class="prev__photo arrow__move">
+              <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 1 3 9l8 8"
+                  stroke="#1D2026"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div class="next__photo arrow__move">
+              <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m2 1 8 8-8 8"
+                  stroke="#1D2026"
+                  stroke-width="3"
+                  fill="none"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
         <div class="slider__block">
           <img
             src="images/image-product-1.jpg"
@@ -107,17 +139,17 @@
             <img
               src="images/image-product-2.jpg"
               alt=""
-              class="invisible product__image"
+              class=" product__image"
             />
             <img
               src="images/image-product-3.jpg"
               alt=""
-              class="invisible product__image"
+              class=" product__image"
             />
             <img
               src="images/image-product-4.jpg"
               alt=""
-              class="invisible product__image"
+              class=" product__image"
             />
             <div class="close__modal">x</div>
             <div class="prev__slide slide__move">
@@ -232,3 +264,16 @@
   </body>
   <script src="app.js"></script>
 </html>
+
+
+<!-- 
+première image : a une class central image à la ligne 212 qui permet 
+d'activer le display block
+première image : a également une class product__image qui n'est pas activée 
+parce qu'elle est quelques lignes plus haut à la ligne 205 qui active 
+un display : none
+
+lorsqu'on clique sur une flèche pour passer d'une image à une autre elle active 
+le display block pour la photo sur laquelle on est et le désactive pour les 
+autres qui passent en display : none 
+ -->
