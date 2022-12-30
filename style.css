@@ -216,10 +216,23 @@ header {
 .full__price p {
   margin-right: 8px;
 }
+.gray__dollar,
+.multiply,
+.single__price,
+.full__quantity {
+  color: hsl(215, 11%, 34%);
+}
+
+.black__dollar,
+.full__total {
+  font-weight: 900;
+  font-weight: 22px;
+}
 
 .full__thumbnail {
   width: 65px;
   height: 65px;
+  border-radius: 8px;
 }
 
 .checkout__button {

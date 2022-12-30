@@ -26,6 +26,15 @@ let mobileCount               = 0;
 let thumbnailPhotos           = document.querySelectorAll(".thumbnail__photo");
 let items                     = document.querySelectorAll(".product__image");
 let count                     = 0;
+let shoesPrice                = document.querySelector('.new__price').textContent.replace('$', '');
+let singlePrice               = document.querySelector('.single__price'); 
+let shoesQuantity             = document.querySelector('.full__quantity');
+let fullTotal                 = document.querySelector('.full__total')
+
+singlePrice.textContent = shoesPrice
+
+
+
 
 
 console.log(emptyMessage);
@@ -74,7 +83,12 @@ function addQuantity() {
   if (buttonQuantity.textContent > 0 && buttonQuantity.textContent <= 99) {
     orangeBubble.classList.add("display__cart");
     productNumber.textContent = buttonQuantity.textContent;
-    emptyMessage.classList.add('hide__message') 
+    shoesQuantity.textContent = buttonQuantity.textContent;
+    fullTotal.textContent = parseInt(shoesQuantity.textContent) * parseInt(shoesPrice).toFixed(2); 
+    // emptyMessage.classList.add('hide__message') 
+    console.log(parseInt(shoesQuantity.textContent) * parseInt(shoesPrice).toFixed(2));
+    console.log(parseInt(shoesQuantity.textContent));
+    console.log(parseInt(productNumber.textContent).toFixed(2));
   } else {
     console.log("Impossible to add empty quantity");
   }
