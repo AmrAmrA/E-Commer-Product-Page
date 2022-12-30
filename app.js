@@ -35,8 +35,6 @@ let fullCart                  = document.querySelector('.full__cart');
 
 singlePrice.textContent = shoesPrice;
 
-console.log(trashIcon);
-console.log(fullCart);
 
 menuIcon.addEventListener("click", menuAppearance);
 crossSign.addEventListener("click", menuDisppearance);
@@ -81,13 +79,14 @@ function addQuantity() {
   if (buttonQuantity.textContent > 0 && buttonQuantity.textContent <= 99) {
     orangeBubble.classList.add("display__cart");
     productNumber.textContent = buttonQuantity.textContent;
-    shoesQuantity.textContent = buttonQuantity.textContent;
+    shoesQuantity.textContent = parseInt(buttonQuantity.textContent);
     fullTotal.textContent =
       parseInt(shoesQuantity.textContent) * parseInt(shoesPrice).toFixed(2);
     emptyMessage.classList.add("hide__message");
     fullCart.classList.add("visible__cart");
+    setLocalStorage()
   } else {
-    console.log("Impossible to add empty quantity");
+    
   }
 }
 
@@ -97,6 +96,24 @@ function deleteCart() {
   emptyMessage.classList.remove("hide__message");
   orangeBubble.classList.remove("display__cart");
 }
+
+let shoesContainer = shoesQuantity.innerText; 
+let priceContainer = parseInt(shoesPrice).toFixed(2);
+let totalContainer = parseInt(shoesContainer) * parseInt(priceContainer); 
+
+
+let productContainer = {
+  shoesContainer, 
+  priceContainer, 
+  totalContainer
+}
+
+let cart = localStorage.getItem("cart") || [];
+function setLocalStorage() {
+  localStorage.setItem("cart", JSON.stringify(productContainer));
+  localStorage.getItem("cart", productContainer);
+}
+
 
 for (let i = 0; i < smallestPhotos.length; i++) {
   smallestPhotos[i].addEventListener("click", function (e) {
