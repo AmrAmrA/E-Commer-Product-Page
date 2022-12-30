@@ -154,6 +154,10 @@ header {
   color: white;
 }
 
+.display__cart {
+  display: block;
+}
+
 /* Design for the cart section */
 .cart__section {
   position: absolute;

@@ -7,6 +7,13 @@ let nextArrow = document.querySelector(".next__slide");
 let prevArrow = document.querySelector(".prev__slide");
 let centralImage = document.querySelector(".central__image");
 
+let addProduct = document.querySelector(".add__product");
+console.log(addProduct);
+let orangeBubble = document.querySelector(".orange__bubble");
+console.log(orangeBubble);
+let productNumber = document.querySelector(".orange__number");
+console.log(productNumber);
+
 menuIcon.addEventListener("click", menuAppearance);
 crossSign.addEventListener("click", menuDisppearance);
 mobileMenu.classList.remove("appearance");
@@ -31,17 +38,35 @@ let minusSign = document.querySelector(".minus__button");
 
 plusSign.addEventListener("click", incrementQuantity);
 minusSign.addEventListener("click", decrementQuantity);
-function incrementQuantity() {
-  buttonValue++;
-  buttonQuantity.textContent = buttonValue;
-}
-function decrementQuantity() {
-  buttonValue--;
-  buttonQuantity.textContent = buttonValue;
 
+function incrementQuantity() {
+  if (buttonQuantity.textContent == "99") {
+    buttonValue = 99;
+    buttonQuantity.textContent = "99";
+  } else {
+    buttonValue++;
+    buttonQuantity.textContent = buttonValue;
+  }
+}
+
+function decrementQuantity() {
   if (buttonQuantity.textContent <= "0") {
     buttonValue = 0;
     buttonQuantity.textContent = "0";
+  } else {
+    buttonValue--;
+    buttonQuantity.textContent = buttonValue;
+  }
+}
+
+addProduct.addEventListener("click", addQuantity);
+
+function addQuantity() {
+  if (buttonQuantity.textContent > 0 && buttonQuantity.textContent <= 99) {
+    orangeBubble.classList.add("display__cart");
+    productNumber.textContent = buttonQuantity.textContent;
+  } else {
+    console.log("Impossible to add empty quantity");
   }
 }
 
