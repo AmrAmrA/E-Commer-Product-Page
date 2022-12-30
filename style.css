@@ -190,6 +190,55 @@ header {
 .visible__cart {
   display: block;
 }
+.hide__message {
+  display: none;
+}
+
+.full__cart {
+  margin: 20px 20px 0px 20px;
+}
+.full__name {
+  color: hsl(215, 11%, 34%);
+  margin-bottom: 6px;
+}
+.first__line {
+  display: flex;
+  align-items: center;
+}
+.full__thumbnail {
+  margin-right: 8px;
+}
+.full__price {
+  display: flex;
+  align-items: center;
+}
+
+.full__price p {
+  margin-right: 8px;
+}
+
+.full__thumbnail {
+  width: 65px;
+  height: 65px;
+}
+
+.checkout__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 60px;
+  border-radius: 10px;
+  background-color: hsl(26, 100%, 55%);
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+}
 /* Design for the main part  */
 
 main {
