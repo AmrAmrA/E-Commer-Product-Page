@@ -187,15 +187,19 @@ header {
   color: hsl(219, 9%, 45%);
   font-size: 17px;
 }
-.visible__cart {
-  display: block;
+.full__cart {
+  margin: 20px 20px 0px 20px;
+  display: none;
+}
+.invisible__cart { 
+  display: none;
 }
 .hide__message {
   display: none;
 }
 
-.full__cart {
-  margin: 20px 20px 0px 20px;
+.visible__cart {
+  display: block;
 }
 .full__name {
   color: hsl(215, 11%, 34%);
@@ -221,6 +225,11 @@ header {
 .single__price,
 .full__quantity {
   color: hsl(215, 11%, 34%);
+}
+
+.gray__dollar, .multiply, .black__dollar {
+  margin-right: 2px;
+  
 }
 
 .black__dollar,

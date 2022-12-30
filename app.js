@@ -29,15 +29,14 @@ let count                     = 0;
 let shoesPrice                = document.querySelector('.new__price').textContent.replace('$', '');
 let singlePrice               = document.querySelector('.single__price'); 
 let shoesQuantity             = document.querySelector('.full__quantity');
-let fullTotal                 = document.querySelector('.full__total')
+let fullTotal                 = document.querySelector('.full__total');
+let trashIcon                 = document.querySelector('.trash__icon');
+let fullCart                  = document.querySelector('.full__cart'); 
 
-singlePrice.textContent = shoesPrice
+singlePrice.textContent = shoesPrice;
 
-
-
-
-
-console.log(emptyMessage);
+console.log(trashIcon);
+console.log(fullCart);
 
 menuIcon.addEventListener("click", menuAppearance);
 crossSign.addEventListener("click", menuDisppearance);
@@ -53,7 +52,6 @@ function menuDisppearance() {
   mobileMenu.classList.remove("appearance");
   filter.classList.remove("toggleVisibilty");
 }
-
 
 plusSign.addEventListener("click", incrementQuantity);
 minusSign.addEventListener("click", decrementQuantity);
@@ -84,14 +82,20 @@ function addQuantity() {
     orangeBubble.classList.add("display__cart");
     productNumber.textContent = buttonQuantity.textContent;
     shoesQuantity.textContent = buttonQuantity.textContent;
-    fullTotal.textContent = parseInt(shoesQuantity.textContent) * parseInt(shoesPrice).toFixed(2); 
-    // emptyMessage.classList.add('hide__message') 
-    console.log(parseInt(shoesQuantity.textContent) * parseInt(shoesPrice).toFixed(2));
-    console.log(parseInt(shoesQuantity.textContent));
-    console.log(parseInt(productNumber.textContent).toFixed(2));
+    fullTotal.textContent =
+      parseInt(shoesQuantity.textContent) * parseInt(shoesPrice).toFixed(2);
+    emptyMessage.classList.add("hide__message");
+    fullCart.classList.add("visible__cart");
   } else {
     console.log("Impossible to add empty quantity");
   }
+}
+
+trashIcon.addEventListener("click", deleteCart);
+function deleteCart() {
+  fullCart.classList.remove("visible__cart");
+  emptyMessage.classList.remove("hide__message");
+  orangeBubble.classList.remove("display__cart");
 }
 
 for (let i = 0; i < smallestPhotos.length; i++) {
@@ -104,7 +108,6 @@ for (let i = 0; i < smallestPhotos.length; i++) {
     e.target.classList.add("small__opacity");
   });
 }
-
 
 biggestPhoto.addEventListener("click", function () {
   modalBlock.classList.add("active__modale");
@@ -176,7 +179,6 @@ function lastOne() {
   }
   allPhotos[mobileCount].classList.add("first__image");
 }
-
 
 cartHeader.addEventListener("click", makeVisible);
 function makeVisible() {
