@@ -150,13 +150,12 @@ function lastOne() {
   allPhotos[mobileCount].classList.add("first__image");
 }
 
-
-let cartHeader = document.querySelector('.cart__header')
+let cartHeader = document.querySelector(".cart__header");
 console.log(cartHeader);
-let invisibleCart = document.querySelector('.cart__section')
+let invisibleCart = document.querySelector(".cart__section");
 
-cartHeader.addEventListener('click', makeVisible)
+cartHeader.addEventListener("click", makeVisible);
 
 function makeVisible() {
-  invisibleCart.classList.toggle('visible__cart')
+  invisibleCart.classList.toggle("visible__cart");
 }
