@@ -56,7 +56,7 @@
           </ul>
         </div>
         <div class="productStorage__block">
-          <img src="images/icon-cart.svg" alt="Cart Icon" class="Cart__icon" />
+          <img src="images/icon-cart.svg" alt="Cart Icon" class="Cart__icon cart__header" />
           <img
             src="images/image-avatar.png"
             alt="Customer's picture"
@@ -64,14 +64,34 @@
           />
         </div>
       </header>
-
+      <div class="cart__section">
+        <p class="cart__name">Cart</p>
+        <div class="cart__border"></div>
+        <p class="empty__message">Your Cart is empty.</p>
+      </div>
       <main>
         <div class="mobile__block">
           <div class="photos__mobile">
-            <img src="images/image-product-1.jpg" alt="" class="mobile__image invisible__image first__image" />
-            <img src="images/image-product-2.jpg" alt="" class="mobile__image invisible__image" />
-            <img src="images/image-product-3.jpg" alt="" class="mobile__image invisible__image" />
-            <img src="images/image-product-4.jpg" alt="" class="mobile__image invisible__image" />
+            <img
+              src="images/image-product-1.jpg"
+              alt=""
+              class="mobile__image invisible__image first__image"
+            />
+            <img
+              src="images/image-product-2.jpg"
+              alt=""
+              class="mobile__image invisible__image"
+            />
+            <img
+              src="images/image-product-3.jpg"
+              alt=""
+              class="mobile__image invisible__image"
+            />
+            <img
+              src="images/image-product-4.jpg"
+              alt=""
+              class="mobile__image invisible__image"
+            />
           </div>
           <div class="arrows__mobile">
             <div class="prev__photo arrow__move">
@@ -139,17 +159,17 @@
             <img
               src="images/image-product-2.jpg"
               alt=""
-              class=" product__image"
+              class="product__image"
             />
             <img
               src="images/image-product-3.jpg"
               alt=""
-              class=" product__image"
+              class="product__image"
             />
             <img
               src="images/image-product-4.jpg"
               alt=""
-              class=" product__image"
+              class="product__image"
             />
             <div class="close__modal">x</div>
             <div class="prev__slide slide__move">
@@ -264,16 +284,3 @@
   </body>
   <script src="app.js"></script>
 </html>
-
-
-<!-- 
-première image : a une class central image à la ligne 212 qui permet 
-d'activer le display block
-première image : a également une class product__image qui n'est pas activée 
-parce qu'elle est quelques lignes plus haut à la ligne 205 qui active 
-un display : none
-
-lorsqu'on clique sur une flèche pour passer d'une image à une autre elle active 
-le display block pour la photo sur laquelle on est et le désactive pour les 
-autres qui passent en display : none 
- -->

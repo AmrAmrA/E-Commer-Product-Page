@@ -50,7 +50,6 @@ let biggestPhoto = document.querySelector(".biggest__photo");
 
 for (let i = 0; i < smallestPhotos.length; i++) {
   smallestPhotos[i].addEventListener("click", function (e) {
-
     let active = document.querySelector(".smallest__photo.small__opacity");
     if (active) {
       active.classList.remove("small__opacity");
@@ -76,7 +75,6 @@ prevArrow.addEventListener("click", prevSlide);
 
 let items = document.querySelectorAll(".product__image");
 let count = 0;
-
 
 function nextSlide() {
   items[count].classList.remove("central__image");
@@ -120,38 +118,45 @@ for (let i = 0; i < thumbnailPhotos.length; i++) {
   });
 }
 
-
-
-// Slider for mobile photos 
-let nextPhoto = document.querySelector('.next__photo'); 
-let prevPhoto = document.querySelector('.prev__photo'); 
-let allPhotos = document.querySelectorAll('.mobile__image')
-let mobileCount = 0; 
+// Slider for mobile photos
+let nextPhoto = document.querySelector(".next__photo");
+let prevPhoto = document.querySelector(".prev__photo");
+let allPhotos = document.querySelectorAll(".mobile__image");
+let mobileCount = 0;
 console.log(nextPhoto);
 console.log(prevPhoto);
 console.log(allPhotos);
 
-nextPhoto.addEventListener('click', nextOne)
-prevPhoto.addEventListener('click', lastOne)
+nextPhoto.addEventListener("click", nextOne);
+prevPhoto.addEventListener("click", lastOne);
 
 function nextOne() {
-         allPhotos[mobileCount].classList.remove('first__image'); 
-         if(mobileCount < allPhotos.length -1) {
-          mobileCount++
-         }
-         else {
-          mobileCount = 0; 
-         }
-         allPhotos[mobileCount].classList.add('first__image')
+  allPhotos[mobileCount].classList.remove("first__image");
+  if (mobileCount < allPhotos.length - 1) {
+    mobileCount++;
+  } else {
+    mobileCount = 0;
+  }
+  allPhotos[mobileCount].classList.add("first__image");
 }
 
 function lastOne() {
- allPhotos[mobileCount].classList.remove('first__image'); 
- if (mobileCount > 0) {
-  mobileCount--;
- }
- else {
-  mobileCount = allPhotos.length - 1; 
- }
- allPhotos[mobileCount].classList.add('first__image')
+  allPhotos[mobileCount].classList.remove("first__image");
+  if (mobileCount > 0) {
+    mobileCount--;
+  } else {
+    mobileCount = allPhotos.length - 1;
+  }
+  allPhotos[mobileCount].classList.add("first__image");
+}
+
+
+let cartHeader = document.querySelector('.cart__header')
+console.log(cartHeader);
+let invisibleCart = document.querySelector('.cart__section')
+
+cartHeader.addEventListener('click', makeVisible)
+
+function makeVisible() {
+  invisibleCart.classList.toggle('visible__cart')
 }

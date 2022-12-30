@@ -24,8 +24,8 @@ a {
 
 /* Design for the header */
 .mobile__menu {
-  position: absolute;
-  background-color: white;
+  position: absolute;       
+  background-color: white ;
   height: 120%;
   width: 55%;
   margin-top: -25px;
@@ -120,6 +120,9 @@ header {
   width: 100px;
   margin-bottom: 50px;
 }
+.cart__header {
+  cursor: pointer;
+}
 .customer__picture {
   width: 50px;
   height: 50px;
@@ -133,6 +136,40 @@ header {
   border: solid 3px orange;
 }
 
+/* Design for the cart section */
+.cart__section {
+  position: absolute;
+  top: 7%;
+  right: 9%;
+  background-color: #fff;
+  z-index: 5000;
+  width: 300px;
+  height: 300px;
+  box-shadow: -3px 33px 48px 1px rgba(0,0,0,0.60);
+  border-radius: 15px;
+  display: none;
+}
+.cart__name {
+  margin: 20px 0px 0px 20px;
+  font-weight: 900;
+  font-size: 20px;
+
+}
+.cart__border {
+  margin-top: 20px; 
+  border-bottom: 1px solid hsl(219, 9%, 45%);
+  
+}
+.empty__message {
+  text-align: center;
+  margin: 95px auto 0px auto;
+  font-weight: 900;
+  color: hsl(219, 9%, 45%);
+  font-size: 17px;
+}
+.visible__cart { 
+  display: block;
+}
 /* Design for the main part  */
 
 main {
@@ -516,6 +553,21 @@ footer .attribution p {
   header {
     justify-content: space-around;
   }
+  .cart__section {
+right: -50%;
+left: -50%;
+right: 0%;
+left: 50%;
+transform: translate(-50%,50%);
+width: 92%;
+top: 90Px;
+transform: translateX(-50%);
+height: 220px;
+  } 
+
+  .empty__message { 
+    margin-top: 55px;
+  }
 
   .modal__block {
     display: none;
@@ -541,7 +593,7 @@ footer .attribution p {
     position: relative;
   }
 
-  .arrow__move { 
+  .arrow__move {
     position: absolute;
     top: 45%;
     background-color: white;
@@ -554,9 +606,9 @@ footer .attribution p {
     cursor: pointer;
   }
   .arrow__move:hover path {
-    stroke:hsl(26, 100%, 55%); 
+    stroke: hsl(26, 100%, 55%);
   }
-  .prev__photo { 
+  .prev__photo {
     left: 7%;
   }
 
@@ -584,6 +636,7 @@ footer .attribution p {
   }
   .old__price {
     margin-right: 30px;
+    margin-bottom: 10px;
   }
   .quantity__choice,
   .add__product {
