@@ -84,9 +84,8 @@ function addQuantity() {
       parseInt(shoesQuantity.textContent) * parseInt(shoesPrice).toFixed(2);
     emptyMessage.classList.add("hide__message");
     fullCart.classList.add("visible__cart");
-    setLocalStorage()
   } else {
-    
+
   }
 }
 
@@ -97,22 +96,6 @@ function deleteCart() {
   orangeBubble.classList.remove("display__cart");
 }
 
-let shoesContainer = shoesQuantity.innerText; 
-let priceContainer = parseInt(shoesPrice).toFixed(2);
-let totalContainer = parseInt(shoesContainer) * parseInt(priceContainer); 
-
-
-let productContainer = {
-  shoesContainer, 
-  priceContainer, 
-  totalContainer
-}
-
-let cart = localStorage.getItem("cart") || [];
-function setLocalStorage() {
-  localStorage.setItem("cart", JSON.stringify(productContainer));
-  localStorage.getItem("cart", productContainer);
-}
 
 
 for (let i = 0; i < smallestPhotos.length; i++) {

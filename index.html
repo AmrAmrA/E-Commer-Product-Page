@@ -19,7 +19,10 @@
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
+    <!-- A container who forces to not click on any element when we display the 
+    slider of shoes images -->
     <div class="globalFilter"></div>
+    <!-- Menu who appears in Mobile -->
     <div class="mobile__menu">
       <img
         src="images/icon-close.svg"
@@ -34,8 +37,11 @@
         <li class="items__mobile">Contact</li>
       </ul>
     </div>
+    <!-- A global container who allows to put margins on the left and the right 
+    of the page -->
     <div class="global__container">
       <header>
+        <!-- Menu who appears in Mobile -->
         <div class="links__block">
           <div class="hamburger__menu">
             <div class="line"></div>
@@ -55,6 +61,7 @@
             <li><a href="#">Contact</a></li>
           </ul>
         </div>
+        <!-- The right side of our header  -->
         <div class="productStorage__block">
           <img
             src="images/icon-cart.svg"
@@ -71,6 +78,7 @@
           </div>
         </div>
       </header>
+      <!-- The part of the cart who indicates the price and the quantity's shoes -->
       <div class="cart__section">
         <p class="cart__name">Cart</p>
         <div class="cart__border"></div>
@@ -103,6 +111,7 @@
         </div>
       </div>
       <main>
+        <!-- Images slider in Mobile format -->
         <div class="mobile__block">
           <div class="photos__mobile">
             <img
@@ -126,6 +135,7 @@
               class="mobile__image invisible__image"
             />
           </div>
+          <!-- Arrows who allow to go the next or the previous photo on the slider -->
           <div class="arrows__mobile">
             <div class="prev__photo arrow__move">
               <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
@@ -182,6 +192,8 @@
             />
           </div>
         </div>
+        <!-- The modals photos when the slider is on the middle of the page 
+        and it becomes impossible to click on the elements of the page -->
         <div class="modal__block">
           <div class="block__image">
             <img
@@ -252,7 +264,8 @@
             />
           </div>
         </div>
-
+        <!-- The block on desktop version with the name,
+        the description, the price and the quantity of shoes -->
         <div class="texts__block">
           <h1 class="orange__title">Sneaker Company</h1>
           <h2 class="black__title">Fall Limited Edition Sneakers</h2>
@@ -310,7 +323,7 @@
               >Frontend Mentor</a
             >
           </p>
-          <p>Coded by <a href="#">Your Name Here</a>.</p>
+          <p>Coded by <a href="https://github.com/AmrAmrA?tab=repositories">Abd El Fattah Amr</a>.</p>
         </div>
       </footer>
     </div>
